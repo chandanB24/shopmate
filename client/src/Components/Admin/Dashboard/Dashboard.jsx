@@ -1,40 +1,17 @@
-import {
-  IconButton,
-  Avatar,
-  Box,
-  CloseButton,
-  Flex,
-  HStack,
-  VStack,
-  Icon,
-  useColorModeValue,
-  Text,
-  Drawer,
-  DrawerContent,
-  useDisclosure,
-  Menu,
-  MenuButton,
-  MenuDivider,
-  MenuItem,
-  MenuList,
-} from '@chakra-ui/react';
-import {
-  FiHome,
-  FiTrendingUp,
-  FiCompass,
-  FiStar,
-  FiMenu,
-  FiBell,
-  FiChevronDown,
-} from 'react-icons/fi';
+import {IconButton,Avatar,Box,CloseButton,Flex,HStack,VStack,Icon,useColorModeValue,Text,Drawer,DrawerContent,useDisclosure,Menu,MenuButton,MenuDivider,MenuItem,MenuList} from '@chakra-ui/react';
+import {FiHome,FiStar,FiMenu,FiBell,FiChevronDown,FiTag} from 'react-icons/fi';
+import {PiSuitcaseSimpleLight} from 'react-icons/pi';
+import {MdPersonOutline} from 'react-icons/md';
+import {SiSimpleanalytics} from 'react-icons/si';
 
 
 const LinkItems = [
   { name: 'Home', icon: FiHome },
-  { name: 'Add Products', icon: FiTrendingUp },
-  { name: 'Manage Orders', icon: FiCompass },
-  { name: 'Payment', icon: FiStar },
-//   { name: 'Settings', icon: FiSettings },
+  { name: 'Products', icon: FiTag },
+  { name: 'Orders', icon: PiSuitcaseSimpleLight},
+  { name: 'Customers', icon: MdPersonOutline },
+  { name: 'Analytics', icon: SiSimpleanalytics },
+
 ];
 
 const SidebarContent = ({ onClose, ...rest }) => {
@@ -80,7 +57,7 @@ const NavItem = ({ icon, children, ...rest }) => {
         role="group"
         cursor="pointer"
         _hover={{
-          bg: 'cyan.400',
+          bg: 'red.500',
           color: 'white',
         }}
         {...rest}
@@ -149,9 +126,9 @@ const MobileNav = ({ onOpen, ...rest }) => {
                   spacing="1px"
                   ml="2"
                 >
-                  <Text fontSize="sm">Justina Clark</Text>
+                  <Text fontSize="sm">SK Stores</Text>
                   <Text fontSize="xs" color="gray.600">
-                    Admin
+                    Owner
                   </Text>
                 </VStack>
                 <Box display={{ base: 'none', md: 'flex' }}>

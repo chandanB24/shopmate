@@ -8,11 +8,11 @@ import Dashboard from './Components/Admin/Dashboard/Dashboard';
 
 export default function AllRoutes() {
 
-  
+  const location = window.location.pathname
 
   return (
     <>
-    <Navbr/>
+   {location === '/'? <Navbr/>:null}
     <Routes>
       <Route path="/" element={<LandingPage/>}></Route>
       <Route path="/auth" element={<Auth/>}></Route>
