@@ -1,6 +1,7 @@
 import React from 'react'
 import image from '../../../assets/adminlanding.png'
 import Info from './Info'
+import Testimonals from './Testimonals'
 
 export default function LandingPage() {
   return (
@@ -30,6 +31,7 @@ export default function LandingPage() {
             </center>
         </div>
         <Info/>
+        <Testimonals/>
     </section>
 
   )
