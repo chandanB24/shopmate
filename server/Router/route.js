@@ -1,10 +1,6 @@
 const express = require('express')
-const {modal} = require("../Modal/db.js")
+const {add_owner} = require('../Controller/functions')
 
 const router = express.Router()
-router.get("/createShop", async (req,res)=>{
-const response = modal.create({
-    email:"asif@gmail.com"
-})
-})
+router.post("/add_owner",add_owner)
 module.exports={router}
