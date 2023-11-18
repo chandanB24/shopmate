@@ -1,0 +1,18 @@
+const {modal} = require("../Modal/db.js")
+
+const add_owner =async(req,res)=>{
+    try{
+        const response = modal.create({
+            email:req.body.email,
+            name:req.body.name,
+        })
+        if(response){
+            res.status(201).json({message:"success"})
+        }
+    }catch{
+        console.log("failed to insert data")
+    }
+   
+}
+
+module.exports={add_owner}

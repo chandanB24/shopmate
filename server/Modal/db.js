@@ -9,6 +9,7 @@ const connect = mongoose.connect(
 
 const Schema = new mongoose.Schema({
   email: String,
+  name:String,
   S_name: String,
   S_img: String,
   S_type: String,
