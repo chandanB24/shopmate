@@ -1,9 +1,9 @@
-/* eslint-disable react/prop-types */
 
-function Card({ shop }) {
+
+const Card = ({ shop })=> {
   return (
     <>
-      <div className="relative flex-col w-56 hover:scale-105 duration-500">
+      <div className="relative flex-col hover:scale-105 duration-500">
         <img src={shop.img} alt="item" className="w-full h-36 rounded-xl mb-2" />
         <h2 className="text-xl font-semibold">{shop.name}</h2>
         <p className="text-sm font-light">{shop.addr}</p>

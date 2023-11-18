@@ -8,6 +8,8 @@ const add_owner =async(req,res)=>{
         })
         if(response){
             res.status(201).json({message:"success"})
+        }else{
+            res.status(500).json({error:"Unsuccessfull"})
         }
     }catch{
         console.log("failed to insert data")

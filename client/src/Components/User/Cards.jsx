@@ -1,7 +1,8 @@
 import Card from "./Card";
 import { SimpleGrid } from "@chakra-ui/react";
+import Navbar from "./Navbar";
 
-function Cards() {
+const  Cards = () => {
   let shops = [
     {
       img: "https://picsum.photos/200",
@@ -26,11 +27,12 @@ function Cards() {
   ];
   return (
     <>
+      <Navbar/>
       <div className="w-4/5 m-auto">
         <h2 className="text-2xl font-bold mb-4">
           Stores with online delivery in Davanagere
         </h2>
-        <SimpleGrid columns={[1, 2, 4]} spacing="30px">
+        <SimpleGrid columns={{base:1,md:2,lg:4}} gap="30px">
           {shops.map((shop) => {
             return (
               <>

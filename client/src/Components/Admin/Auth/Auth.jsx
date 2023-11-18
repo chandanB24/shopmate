@@ -3,8 +3,12 @@ import { FaGoogle } from "react-icons/fa";
 import { Button, Center, Text } from "@chakra-ui/react";
 import { useGoogleLogin } from "@react-oauth/google";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export default function Auth() {
+
+  const push = useNavigate()
+
   const login = useGoogleLogin({
     onSuccess: async (response) => {
       try {
@@ -21,7 +25,12 @@ export default function Auth() {
             "http://localhost:8080/admin/add_owner",
             { email: res.data.email, name: res.data.name }
           );
-          console.log(load)
+          if(load.data.message){
+            push('/create')
+          }
+          else{
+            alert('error in signin')
+          }
         }
       } catch (error) {
         console.log(error);

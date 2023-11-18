@@ -2,7 +2,7 @@ import { Input, InputGroup, InputRightElement } from "@chakra-ui/react";
 import { FaSearch } from "react-icons/fa";
 import { FaUserCircle } from "react-icons/fa";
 
-function Navbar() {
+const  Navbar = () => {
   return (
     <>
       <div className="w-4/5 m-auto">
@@ -23,8 +23,9 @@ function Navbar() {
         </div>
       </div>
       <div className="w-full bg-gray-400 h-0.5"></div>
-      <img src="https://picsum.photos/200" alt="navbarImage" className="w-full h-72 mb-4 rounded-b-2xl" />
-
+      <div className="w-full h-80 mb-4 rounded-b-2xl bg-slate-300">
+        
+      </div>
     </>
   );
 }
